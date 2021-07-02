@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: auto;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+html{
+    --gray-dark: #828282;
+    --gray-light: #d4d4d4;
+}
+
+.sr-only{
+    position: absolute;
+    height: 1px;
+    width: 1px;
+    pad: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+body{
+    display: flex;
+}
+
+:host{
+    display: flex;
+    flex-flow: column;
+
+    padding: 40px;
+    width: 969px;
+}
