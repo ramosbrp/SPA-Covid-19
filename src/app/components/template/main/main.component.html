@@ -1,0 +1,12 @@
+<article class="content" *ngFor = 'let i of numero' >
+    <div id="bg">
+          <img src="./assets/img/covid.jpg" alt="">
+      </div>
+      <div class="text">
+          <h4> {{ title }} </h4>
+          <p> {{ text }} </p>
+
+          <a href="#" (click)="getter()" >Leia mais</a>
+            <div id="postsText" >  </div>
+    </div>
+</article >

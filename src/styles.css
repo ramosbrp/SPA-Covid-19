@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 *{
-    margin: auto;
+    margin: 0;
     padding: 0;
     border: none;
     text-decoration: none;
@@ -27,6 +27,8 @@ html{
 }
 body{
     display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 :host{
@@ -36,3 +38,12 @@ body{
     padding: 40px;
     width: 969px;
 }
+
+/* @MEDIA */
+@media(max-width: 450px){
+    #search{
+        max-width: 100px;
+    }
+   }
+   
+   

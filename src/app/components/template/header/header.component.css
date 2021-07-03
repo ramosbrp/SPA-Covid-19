@@ -1,0 +1,18 @@
+:host{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    margin: 80px auto 60px auto;
+}
+
+h2{
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+p{
+    color: var(--gray-dark);
+    font-size: 11px;
+}
