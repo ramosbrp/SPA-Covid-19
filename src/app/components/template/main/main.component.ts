@@ -1,3 +1,4 @@
+import { HtmlAstPath } from '@angular/compiler';
 import { listLazyRoutes } from '@angular/compiler/src/aot/lazy_routes';
 import { Component, OnInit } from '@angular/core';
 import { Posts } from '../../../models/jsonplaceholder.module';
@@ -15,29 +16,32 @@ export class MainComponent implements OnInit {
   postsText = ''
     "posts": Posts
     erro: any
-    lista: string = ''
-
-    // post = {} as Posts
-
-    
+    lista: any
+    indice: any
+    post = {} as Posts
+    indicee: any
 
   constructor(private crudService: CrudService) { 
-    // this.getter();
    }
+
 
   ngOnInit(): void {
     this.title = 'Encontramos um total de 20 resultados para sua busca'
     this.text = 'Saiba o que é o coronavírus em quanto tempo a doença pode se manifestar e quais são os principais'
-    this.lista = ''
   }
 
-  getter(){
-    this.crudService.getPosts().subscribe((data: Posts) =>{
+  getter(indice: any){
+    this.crudService.getPosts(indice).subscribe((data: Posts) =>{
       this.posts = data;
+      this.mountPosts(data)
+
+      // console.log(numero1+numero1)
       
-      console.log('O data que recebemos', data.title+' -' + ' '+data.body);
-      console.log('A variável que preenchemos', this.title);
-      this.mountPosts()
+      
+
+      console.log('O data que recebemos: ', data.title,' --------------' , ' ',data.body);
+      console.log('A variável que preenchemos: ', this);
+      
       
       
     }),(error: any) =>{
@@ -46,17 +50,24 @@ export class MainComponent implements OnInit {
       
     }
   }
+  
+  mountPosts(lista: any){
+    let html: any = '';
+    html += '<h3>'+lista.title+'</h3>';
+    html += lista.body+'<br/>';
+    html += '<hr/>'; 
 
-  mountPosts(){
-    let html = '';
-    let lista = '';
-    // for(let i in numero)
-    html += '<h3>'+lista+'</h3>';
-    html += lista+'<br/>';
-    html += '<hr/>';   
+    console.log()
 
-    let teste = document.getElementById('postsText') as HTMLDivElement
-    teste.innerHTML = html;
+    this.concatenar(html)     
+  
   }
+  concatenar(html: any){    
+    let teste = document.getElementById(`postsText${1}`) as HTMLElement
+    teste.innerHTML = html
+  }
+
   
 }
+
+
