@@ -1,0 +1,23 @@
+
+
+
+<section id="notice-form">
+    <h2>Digite sua notícia</h2>
+    <input type="text" placeholder="Digite o título da notícia" [(ngModel)]="post.til" >
+    <form >
+        <label class="sr-only" for-id="notice">Qual notícia você quer cadastrar?</label>
+        <textarea name="notice" id="notice" placeholder="Digite a notícia que gostaria de cadastrar?" [(ngModel)]="post.bd" ></textarea>
+
+        <footer>
+            <div>
+                <img src="../../../assets/img/lock.svg" alt="Cadeado">
+                Notícia
+            </div>
+            <a href="" [routerLink]="['/']" routerLinkActive="router-link-active" (click)='gravar(post)' >Cadastrar</a>
+        </footer>
+    </form>
+</section>
+
+
+
+<!-- <router-outlet></router-outlet> -->

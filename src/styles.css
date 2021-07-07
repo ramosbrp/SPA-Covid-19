@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+html{
+    --gray-dark: #828282;
+    --gray-light: #d4d4d4;
+    --gray-blue: #A1B2CD;
+    --icons-details: #A5B0C1;
+    --black: #0D114F;
+
+    /* 1rem = 16rem (User Agent) = 100% (User Agent) */
+    font-size: 62.5% /* 10rem */
+
+}
+
+.sr-only{
+    position: absolute;
+    height: .1rem;
+    width: .1rem;
+    pad: 0;
+    margin: -.1rem;
+    overflow: hidden;
+    clip-path: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    width: 100vw;
+}
+
+:host{
+    display: flex;
+    flex-flow: column;
+
+    padding: 4rem;
+    width: 96.9rem;
+}
+
+/* @MEDIA */
+@media(max-width: 45rem){
+    #search{
+        max-width: 10rem;
+    }
+   }
+   
+   
