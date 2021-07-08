@@ -26,8 +26,8 @@ export class MainComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.title = 'Encontramos um total de 20 resultados para sua busca'
-    this.text = 'Saiba o que é o coronavírus em quanto tempo a doença pode se manifestar e quais são os principais'
+    this.title = 'Coronavírus: Como a doença é transmitida?'
+    this.text = 'Saiba o que é o coronavírus, em quanto tempo a doença pode se manifestar e quais são os principais'
   }
 
   getter(indice: any){
