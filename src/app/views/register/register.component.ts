@@ -30,15 +30,4 @@ export class RegisterComponent implements OnInit {
     )
   }
 
-  getter(post: Post){
-    alert(JSON.stringify(post, null, 4))
-    this.service.post(post).subscribe(() =>{
-      alert('Sucess')
-    },
-    () =>{
-      alert('Error')
-    }
-    )
-  }
-
 }

@@ -6,7 +6,7 @@
     justify-content: space-between;
 }
 .content{
-    border: .2rem var(--gray-light) solid;
+    border: .1rem var(--gray-light) solid;
     border-radius: .5rem;
     display: flex;
     flex-flow: column;
@@ -33,7 +33,6 @@
 
 .text h2{
     margin-bottom: 2.0rem;
-    /* font-size: 1.3rem; */
 }
 
 .text p{

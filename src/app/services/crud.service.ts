@@ -11,8 +11,6 @@ const  apiUrl = 'http://localhost:3000/post/'
 })
 export class CrudService {
 
-
-
   
   // Injetando Http Client
   constructor(private http: HttpClient) { }
@@ -21,7 +19,7 @@ export class CrudService {
     return this.http.post<Post>(apiUrl, post)
   }
 
-  public getPosts(indice: any):Observable<any>{
+  get(indice: any):Observable<any>{
     return this.http.get(`${apiUrl}${indice}`)
 
 
