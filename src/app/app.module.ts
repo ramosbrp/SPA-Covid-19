@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './views/register/register.component';
 import { HomeComponent } from './views/home/home.component';
 import { FormsModule } from '@angular/forms';
+import { DetailComponent } from './views/detail/detail.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { FormsModule } from '@angular/forms';
     NavComponent,
     RegisterComponent,
     HomeComponent,
+    DetailComponent,
   ],
   imports: [
     BrowserModule,

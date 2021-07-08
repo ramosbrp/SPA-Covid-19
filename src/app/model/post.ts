@@ -1,4 +1,5 @@
 export interface Post {
-    "til": string,
-    "bd": string
+    "title": string,
+    "body": string,
+    "id": number
 }

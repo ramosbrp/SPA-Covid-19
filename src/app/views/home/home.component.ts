@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-// import { CrudService } from 'src/app/services/crud.service';
-// import { Post } from 'src/app/models/jsonplaceholder.module';
+import { CrudService } from 'src/app/services/crud.service';
+import { Post } from 'src/app/model/post';
 
 
 @Component({
@@ -13,70 +13,68 @@ export class HomeComponent implements OnInit {
   title = ''  
   text = ''
   // postsText = ''
-  // "posts": Post
-  // post = {} as Post
   
-  // erro: any
+  post: Post={
+    title: '',
+    body: '',
+    id: 0
+  }
+
+  erro: any
   // lista: any
-  // indice: any
+  indice: any
   
   // indicee: any
 
-  // constructor(private crudService: CrudService) { 
-  //  }
+  constructor(private crudService: CrudService) { 
+   }
 
 
   ngOnInit(): void {
-    this.title = 'Encontramos um total de 20 resultados para sua busca'
-    this.text = 'Saiba o que é o coronavírus em quanto tempo a doença pode se manifestar e quais são os principais'
+    this.title = 'Coronavírus: Como a doença é trnasmitida?'
+    this.text = 'Saiba o que é o coronavírus, em quanto tempo a doença pode se manifestar e quais são os principais'
   }
 
-  // getter(indice: any){
-  //   this.crudService.getPosts(indice).subscribe((data: Posts) =>{
-  //     this.posts = data;
-  //     this.mountPosts(data)
+  getter(indice: number){
+    this.crudService.getPosts(indice).subscribe((data: Post) =>{
+      this.post = data;
+      this.mountPosts(data)
 
-  //     var numero1 = indice
-  //     console.log(numero1+numero1)
-      
-      
-
-  //     console.log('O data que recebemos: ', data.title,' --------------' , ' ',data.body);
-  //     console.log('A variável que preenchemos: ', this);
-      
-      
-      
-  //   }),(error: any) =>{
-  //     this.erro = error;
-  //     console.error('ERROR: ', error);
-      
-  //   }
+  // getter(post: Post):Observable<Post>{
+  //   return this.http.get<Post>(apiUrl, post)
   // }
 
-  // // Salvar post
-  // savePost(form: NgForm) {    
+      // var numero1 = indice
+      // console.log(numero1+numero1)
+      
+      
+
+      console.log('O data que recebemos: ', data.title,' --------------' , ' ',data.body);
+      console.log('A variável que preenchemos: ', data);
+      
     
-  //     this.crudService.savePost(this.post).subscribe(() => {
-  //       // this.cleanForm(form);
-  //     });
-    
-  // }
+    }),(error: any) =>{
+      this.erro = error;
+      console.error('ERROR: ', error);
+      
+    }
+  }
   
-  // mountPosts(lista: any){
-  //   let html: any = '';
-  //   html += '<h3>'+lista.title+'</h3>';
-  //   html += lista.body+'<br/>';
-  //   html += '<hr/>'; 
+  mountPosts(post: Post){
+    let html: any = '';
+    html += '<h3>'+post.title+'</h3>';
+    html += '<p>'+post.body+'</p>'+'<hr/>';
+    // html += '<hr/>';
 
-  //   console.log()
+    console.log()
 
-  //   this.concatenar(html)     
+    this.concatenar(html)     
   
-  // }
-  // concatenar(html: any){    
-  //   let teste = document.getElementById(`postsText${1}`) as HTMLElement
-  //   teste.innerHTML = html
-  // }
+  }
+  concatenar(html: any){    
+    let teste = document.getElementById(`postsText${1}`) as HTMLElement
+    teste.innerHTML = html
+  }
 
   
 }

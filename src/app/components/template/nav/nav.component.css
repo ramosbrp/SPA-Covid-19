@@ -1,8 +1,7 @@
 :host{
-    /* width: 100%; */
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     margin-left: 3.0rem;
 }
 
@@ -10,10 +9,8 @@
     max-width: 19.5rem;
     height: 100%;
     margin-left: 2.0rem;
-    /* margin-top: 0; */
     display: flex;
-    flex-flow: wrap;
-    /* margin-right: 0; */
+    flex-flow: column wrap;
 
 }
 
@@ -24,7 +21,6 @@
 }
 
 .separator{
-    flex-flow: column;
     margin-bottom: 3.0rem;
     width: 100%;    
 }
@@ -76,6 +72,10 @@ input::placeholder{
     color: var(--gray-blue);
 }
 
+#navButton{
+    margin-left: 0;
+}
+
 a{
     border: .2rem var(--gray-light) solid;
     outline: none;
@@ -83,14 +83,18 @@ a{
     max-width: 19.5rem;
     height: 3.5rem;
     padding: .8rem;
+    margin-top: 2rem;
     
-    /* margin-top: 5.0rem; */
     
     text-decoration: nonde;
     color: black;
     font-size: 1.2rem;
 
     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    
 
 
 }

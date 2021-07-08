@@ -11,16 +11,28 @@ export class RegisterComponent implements OnInit {
 
   constructor(private service: CrudService ) { }
   post: Post ={
-    til: '',
-    bd: ''
+    title: '',
+    body: '',
+    id: 0
   }
 
   ngOnInit(): void {
   }
 
-  gravar(post: Post){
+  save(post: Post){
     alert(JSON.stringify(post, null, 4))
-    this.service.gravar(post).subscribe(() =>{
+    this.service.post(post).subscribe(() =>{
+      alert('Sucess')
+    },
+    () =>{
+      alert('Error')
+    }
+    )
+  }
+
+  getter(post: Post){
+    alert(JSON.stringify(post, null, 4))
+    this.service.post(post).subscribe(() =>{
       alert('Sucess')
     },
     () =>{

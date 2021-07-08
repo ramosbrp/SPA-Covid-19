@@ -1,14 +1,19 @@
 {
   "post": [
     {
-      "til": "adsads",
-      "bd": "adasdas",
+      "title": "Título legal",
+      "body": "Notícia show de bola",
       "id": 1
     },
     {
-      "til": "dada",
-      "bd": "adsadasda",
+      "title": "Notícia 2",
+      "body": "Corpo da notícia",
       "id": 2
+    },
+    {
+      "title": "título 4",
+      "body": "notícia bem legal",
+      "id": "4"
     }
   ]
 }

@@ -3,17 +3,27 @@
 
 <section id="notice-form">
     <h2>Digite sua notícia</h2>
-    <input type="text" placeholder="Digite o título da notícia" [(ngModel)]="post.til" >
+    <input type="text" placeholder="Digite o título da notícia" [(ngModel)]="post.title" >
+    <label><strong>Selecione em que posição deseja cadastrar a notícia</strong></label>
+					<select id="selectPosition" required [(ngModel)]="post.id" >
+						<option selected disabled value="">Selecione</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+					</select>
     <form >
         <label class="sr-only" for-id="notice">Qual notícia você quer cadastrar?</label>
-        <textarea name="notice" id="notice" placeholder="Digite a notícia que gostaria de cadastrar?" [(ngModel)]="post.bd" ></textarea>
+        <textarea name="notice" id="notice" placeholder="Digite a notícia que gostaria de cadastrar?" [(ngModel)]="post.body" ></textarea>
 
         <footer>
             <div>
                 <img src="../../../assets/img/lock.svg" alt="Cadeado">
                 Notícia
             </div>
-            <a href="" [routerLink]="['/']" routerLinkActive="router-link-active" (click)='gravar(post)' >Cadastrar</a>
+            <a href="" [routerLink]="['/']" routerLinkActive="router-link-active" (click)='save(post)' >Cadastrar</a>
         </footer>
     </form>
 </section>
