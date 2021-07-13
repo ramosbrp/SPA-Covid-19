@@ -1,24 +1,9 @@
 {
   "post": [
     {
-      "title": "Título legal",
-      "body": "Notícia show de bola",
-      "id": 1
-    },
-    {
-      "title": "Notícia 2",
-      "body": "Corpo da notícia",
-      "id": 2
-    },
-    {
-      "title": "título 4",
-      "body": "notícia bem legal",
-      "id": "4"
-    },
-    {
-      "title": "Notícia 5",
-      "body": "Preenchenco a notícia",
-      "id": "5"
+      "title": "Título 1",
+      "body": "Primeira notícia",
+      "id": "1"
     }
   ]
 }
