@@ -1,4 +1,7 @@
-# Etapa3
+# SPA Covid-19
+
+![Captura de tela de 2021-07-24 00-01-28](https://user-images.githubusercontent.com/61557867/126855668-5c95f04a-ede0-4be6-ba88-e98c59c30c32.png)
+![Captura de tela de 2021-07-24 00-01-58](https://user-images.githubusercontent.com/61557867/126855669-2d5c7de3-6e4a-4206-939b-35232fb277ba.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
 
